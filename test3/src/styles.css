@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+.main-container {
+    display: flex;
+}
+.sidebar{
+    width: 30%;
+    flex-direction: column;
+    background-color: gray;
+    height: 100vh;
+}
+.content{
+    width: 70%;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+}
