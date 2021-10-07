@@ -1,0 +1,17 @@
+<form (ngSubmit)="addHeroe()">
+    <label for="name">Nombre:</label> 
+        <input 
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="heroe.name">
+    <label for="power">Poder:
+        <input 
+            id="power"
+            type="text"
+            name="power"
+            [(ngModel)]="heroe.power"
+        ></label> 
+    <br>
+    <button type="submit" >Agregar Heroe</button>
+</form>

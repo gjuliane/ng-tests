@@ -1,0 +1,5 @@
+<h2>Listado de Heroes</h2>
+<ul>
+    <li *ngFor="let heroe of heroes">{{heroe.name}} - {{heroe.power}}</li>
+</ul>
+<app-add (outputHeroe)="agregarHeroe($event)"></app-add>
