@@ -1,0 +1,53 @@
+<div class="add-container">
+    <div class="add-form">
+        <h3>Agregar</h3>
+        <form [formGroup]="myForm" (ngSubmit)="save()" autocomplete="off">
+            <div>
+                <label for="name">Nombre: </label>
+                <input type="text" id="name"
+                    formControlName="name">
+                <div *ngIf="fieldHasErrors('name')">{{labelErrors.name}}</div>
+            </div>
+            <br>
+            <div>
+                <label for="age">Edad: </label>
+                <input type="number" id="age"
+                    formControlName="age">
+                <div *ngIf="fieldHasErrors('age')">{{labelErrors.age}}</div>
+            </div>
+            <br>
+            <div>
+                <button type="submit">{{labelButton}}</button>
+            </div>
+        </form>
+        <br>
+        <br>
+        <br>
+        <div>
+            <h3>Form Status</h3>
+            <div>
+                <span>Valid</span>
+                <pre>{{ myForm.valid}}</pre>
+            </div>
+            <div>
+                <span>Pristine</span>
+                <pre>{{ myForm.pristine}}</pre>
+            </div>
+            <div>
+                <span>Touched</span>
+                <pre>{{ myForm.touched}}</pre>
+            </div>
+            <div>
+                <span>Errors name</span>
+                <pre>{{ myForm.controls.name.errors | json}}</pre>
+            </div>
+            <div>
+                <span>Errors age</span>
+                <pre>{{ myForm.controls.age.errors | json}}</pre>
+            </div>
+        </div>
+    </div>
+    <div class="add-list">
+        <app-list></app-list>
+    </div>
+</div>

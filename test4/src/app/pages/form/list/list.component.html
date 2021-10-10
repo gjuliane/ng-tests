@@ -1,0 +1,11 @@
+
+<h3>Listado</h3>
+<div>
+    <div *ngFor="let person of persons;let i = index">
+        ID:{{person.id}} -- Nombre:{{person.name}} -- Edad:{{person.age}}
+        <div>
+            <button [routerLink]="['/home/edit', person.id]">Editar</button>
+            <button (click)="delete(i)">Borrar</button>
+        </div>
+    </div>
+</div>

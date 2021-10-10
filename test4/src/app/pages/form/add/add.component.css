@@ -1,0 +1,10 @@
+.add-container{
+    display: flex;
+    flex-direction: row;
+}
+.add-form{
+    width: 50%;
+}
+.add-list{
+    width: 50%;
+}
